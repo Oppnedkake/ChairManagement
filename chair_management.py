@@ -4,7 +4,7 @@ def calculate_chairs_per_person(num_chairs, reservations):
     chairs = []
     for res_id, name, number in reservations:
         try:
-            chairs.append(num_chairs / int(number))
+            chairs.append(num_chairs // number)
         except ZeroDivisionError:
             # Assume that 0 guests in reality means 1 guest
             chairs.append(num_chairs)
